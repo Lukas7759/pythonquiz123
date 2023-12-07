@@ -1,0 +1,177 @@
+// eanglish version 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz o Pythonie</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+            background-image: url(' https://ocdn.eu/pulscms-transforms/1/HDpk9kpTURBXy8zOTQwYjUwMjc5YTU4OTJkOGQzNWIwNzQ3YzUzNzIyOC5qcGeSlQMAzHDNBLDNAqOTBc0EsM0CpN4AAqEwAaExAA');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: black; /* Zmieniłem kolor tekstu na czarny */
+        }
+
+        h2 {
+            color: #ffffff;
+        }
+
+        .question {
+            margin-bottom: 20px;
+            text-align: left;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input {
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #result {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    
+
+
+<html lang="en"> <head> <meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz in Python</title> <style> .user-wrong-answer { background-color: red; } .correct-answer { display: none; color: green; } 
+</style> </head> 
+<body> <h1>Python Quiz</h1>
+<div class="question" id="question1">
+    <p>1. What does the `global` keyword do in Python?</p>
+    <label><input type="radio" name="q1" value="a"> Defines a variable in the global scope</label>
+    <label><input type="radio" name="q1" value="b"> Specifies that a variable is local to the current function</label>
+    <label><input type="radio" name="q1" value="c"> Defines a function that can be accessed anywhere in the code</label>
+    <span class="correct-answer">1. Defines a variable in the global scope</span>
+</div>
+
+<div class="question" id="question2">
+    <p>2. What is the result of `print(30 * 2 + 15 * 2)` in Python?</p>
+    <label><input type="radio" name="q2" value="a"> 250</label>
+    <label><input type="radio" name="q2" value="b"> 315</label>
+    <label><input type="radio" name="q2" value="c"> 120</label>
+    <span class="correct-answer">2. Defines a variable in the global scope</span>
+</div>
+
+<div class="question" id="question3">
+    <p>3. What does the `print()` function do in Python?</p>
+    <label><input type="radio" name="q3" value="a"> Outputs the current value of a variable</label>
+    <label><input type="radio" name="q3" value="b"> Displays a list of available variables</label>
+    <label><input type="radio" name="q3" value="c"> Starts a new print job</label>
+    <span class="correct-answer">3. Outputs the current value of a variable</span>
+</div>
+
+<div class="question" id="question4">
+    <p>4. What does the `import` statement do in Python?</p>
+    <label><input type="radio" name="q4" value="a"> Imports a module into the current scope</label>
+    <label><input type="radio" name="q4" value="b"> Loads a script and runs it</label>
+    <label><input type="radio" name="q4" value="c"> Specifies a file where a function or class should be stored</label>
+    <span class="correct-answer">4. Imports a module into the current scope</span>
+</div>
+
+<div class="question" id="question5">
+    <p>5. What is the difference between the `global` and `nonlocal` keywords in Python?</p>
+    <label><input type="radio" name="q5" value="a"> `global` can be used inside a function to access a global variable, while `nonlocal` cannot</label>
+    <label><input type="radio" name="q5" value="b"> `global` can be used inside a function to access a global variable, and `nonlocal` can be used inside a nested function to access a variable from the enclosing function</label>
+    <label><input type="radio" name="q5" value="c"> `global` and `nonlocal` cannot be used to access global or enclosing function variables</label>
+    <span class="correct-answer">5. B can be used inside a function to access a global variable, and `nonlocal` can be used inside a nested function to access a variable from the enclosing function</span>
+</div>
+
+<div class="question" id="question6">
+    <p>6. What does the `except` block do in a try-except statement in Python?</p>
+    <label><input type="radio" name="q6" value="a"> Defines a condition under which the except block will be executed</label>
+    <label><input type="radio" name="q6" value="b"> Specifies the type of exception that will be caught and handled</label>
+    <label><input type="radio" name="q6" value="c"> Handles an exception that was raised and not yet handled</label>
+    <span class="correct-answer">6. B. Specifies the type of exception that will be caught and handled</span>
+</div>
+
+<div class="question" id="question7">
+    <p>7. What does the `else` block do in a try-except statement in Python?</p>
+    <label><input type="radio" name="q7" value="a"> Executes if an exception was raised and not handled</label>
+    <label><input type="radio" name="q7" value="b"> Executes if no exception was raised</label>
+    <label><input type="radio" name="q7" value="c"> Specifies the type of exception that will be caught and handled</label>
+    <span class="correct-answer">7. B. Executes if no exception was raised</span>
+</div>
+
+<div class="question" id="question8">
+    <p>8. What is the `finally` block used for in a try-except statement in Python?</p>
+    <label><input type="radio" name="q8" value="a"> Specifies the code that will be executed no matter if an exception was raised or not</label>
+    <label><input type="radio" name="q8" value="b"> Handles the exception that was raised</label>
+    <label><input type="radio" name="q8" value="c"> Executes if no exception was raised</label>
+    <span class="correct-answer">8. A. Specifies the code that will be executed no matter if an exception was raised or not</span>
+</div>
+
+<button onclick="checkAnswers()">Check Answers</button>
+<p id="result"></p>
+
+<script>
+    function checkAnswers() {
+        var totalQuestions = 8;
+        var correctAnswers = 0;
+
+        for (var i = 1; i <= totalQuestions; i++) {
+            var selectedOption = document.querySelector('input[name="q' + i + '"]:checked');
+            if (selectedOption !== null) {
+                var correctAnswer = selectedOption.value;
+                var correctSpan = document.querySelector('.question:nth-child(' + i + ') .correct-answer');
+                var correctText = correctSpan.textContent;
+
+                if (correctText.indexOf(correctAnswer) === 0) {
+                    correctAnswers++;
+                    correctSpan.style.display = 'inline';
+                } else {
+                    selectedOption.parentElement.style.backgroundColor = 'red';
+                }
+            }
+        }
+
+        var resultText = "You got " + correctAnswers + " out of " + totalQuestions + " correct.";
+        document.getElementById("result").textContent = resultText;
+    }
+</script>
+</body>
+</html> 
+for (var i = 1; i <= totalQuestions; i++) {
+    var selectedOption = document.querySelector('input[name="q' + i + '"]:checked');
+    if (selectedOption !== null) {
+        var correctAnswer = selectedOption.value;
+        var correctSpan = document.querySelector('.question:nth-child(' + i + ') .correct-answer');
+        var correctText = correctSpan.textContent;
+
+        if (correctText.indexOf(correctAnswer) === 0) {
+            correctAnswers++;
+            correctSpan.style.display = 'inline';
+        } else {
+            selectedOption.parentElement.style.backgroundColor = 'red';
+        }
+    }
+}
