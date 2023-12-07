@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+            background-image: url('https://ocdn.eu/pulscms-transforms/1/HDpk9kpTURBXy8zOTQwYjUwMjc5YTU4OTJkOGQzNWIwNzQ3YzUzNzIyOC5qcGeSlQMAzHDNBLDNAqOTBc0EsM0CpN4AAqEwAaExAA');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: black;
+        }
+
+        h1 {
+            color: #ffffff;
+        }
+
+        .question {
+            margin-bottom: 20px;
+            text-align: left;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input {
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #result {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+        .correct-answer {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Python Quiz</h1>
+
+<div class="question" id="question1">
+    <p>1. Как определить версию Python, используемую в данный момент?</p>
+    <label><input type="radio" name="q1" value="a"> Введите `python --version` в терминале</label>
+    <label><input type="radio" name="q1" value="b"> Введите `python3 --version` в терминале</label>
+    <label><input type="radio" name="q1" value="c"> Введите `py --version` в терминале</label>
+    <span class="correct-answer">1. C. Введите `py --version` в терминале</span>
+</div>
+
+<!-- ... (Podobne poprawki dla pozostałych pytań) ... -->
+
+<button onclick="checkAnswers()">Проверить ответы</button>
+<p id="result"></p>
+
+<script>
+    function checkAnswers() {
+        var total = 0;
+        var questions = document.getElementsByClassName("question");
+
+        for (var i = 0; i < questions.length; i++) {
+            var answers = questions[i].getElementsByTagName("input");
+
+            for (var j = 0; j < answers.length; j++) {
+                if (answers[j].checked && answers[j].value === 'c') {
+                    total++;
+                    break;
+                }
+            }
+        }
+
+        var result = document.getElementById('result');
+
+        if (total === 5) {
+            result.textContent = 'Все верно!';
+        } else {
+            result.textContent = 'Вы допустили ' + (5 - total) + ' ошибок.';
+        }
+    }
+</script>
+
+</body>
+</html>
+    
+
+
+
+.correct-answer {
+        display: none;
+    }
+</style>
+</head> <body> <h1>Python Quiz</h1> 
+<div class="question" id="question1"> <p>1. Как определить версию Python, используемую в данный момент?</p>
+<label><input type="radio" name="q1" value="a"> Введите `python --version` в терминале</label>
+<label><input type="radio" name="q1" value="b"> Введите `python3 --version` в терминале</label> 
+<label><input type="radio" name="q1" value="c"> Введите `py --version` в терминале</label>
+<span class="correct-answer">1. C. Введите `py --version` в терминале</span> </div>
+<div class="question" id="question2">
+    <p>2. Что такое строка кода `if __name__ == "__main__":`?</p>
+    <label><input type="radio" name="q2" value="a"> Это проверка наличия переменной `__name__`</label>
+    <label><input type="radio" name="q2" value="b"> Это проверка того, что скрипт выполняется не как модуль</label>
+    <label><input type="radio" name="q2" value="c"> Это проверка того, что скрипт выполняется как модуль</label>
+    <span class="correct-answer">2. B. Это проверка того, что скрипт выполняется не как модуль</span>
+</div>
+
+<div class="question" id="question3">
+    <p>3. Как вызвать исключение `TypeError` в Python?</p>
+    <label><input type="radio" name="q3" value="a"> Используйте функцию `raise()`</label>
+    <label><input type="radio" name="q3" value="b"> Используйте оператор `try...except`</label>
+    <label><input type="radio" name="q3" value="c"> Используйте оператор `raise`</label>
+    <span class="correct-answer">3. C. Используйте оператор `raise`</span>
+</div>
+
+<div class="question" id="question4">
+    <p>4. Как вызвать исключение `TypeError` с сообщением об ошибке в Python?</p>
+    <label><input type="radio" name="q4" value="a"> Используйте функцию `raise(TypeError)`</label>
+    <label><input type="radio" name="q4" value="b"> Используйте функцию `raise(TypeError, "your message here")`</label>
+    <label><input type="radio" name="q4" value="c"> Используйте оператор `raise TypeError("your message here")`</label>
+    <span class="correct-answer">4. C. Используйте оператор `raise TypeError("your message here")`</span>
+</div>
+
+<div class="question" id="question5">
+    <p>5. Что такое `try-except` блок в Python?</p>
+    <label><input type="radio" name="q5" value="a"> Это блок, который обрабатывает исключения, возникающие в блоке `try`</label>
+    <label><input type="radio" name="q5" value="b"> Это блок, который проверяет, выполняется ли блок `try` правильно</label>
+    <label><input type="radio" name="q5" value="c"> Это блок, который используется для перехвата ошибок и прерывания выполнения программы</label>
+    <span class="correct-answer">5. A. Это блок, который обрабатывает исключения, возникающие в бло        <span class="correct-ке `try`</answer">5span>
+A </div>. Это б
+() { var total <button onclick=" = 0; checkAnswers var answers = document
+.()">ПровgetElementsByName('q1ерить ответ'); for (var iы</button> = 0; i 
+< <script> answers.length; i++) function checkA { if (ansnswers() { wers[i].checked && var total = answers[i].value0; var == 'c') 
+{ questions = document.getElementsBy total++; breakClassName("question");
+
+; } for (var i } answers = document. = 0;getElementsByName('q2 i < questions.length'); for (var i; i++) = 0; i < 
+{ var user answers.length; i++) { Answer = questions[i]. if (answers[getElementsByTagName("input")i].checked && answers[[0].value; i].value == 'b') 
+{ var correctAnswer = questions[ total++;
+i].getElementsByClassName("correct break; } -answer")[0].inner } answers = document.getElementsByNameText.slice(3); ('q3'); for ( if (userAnswer === correctvar i = 0; i < answersAnswer) { total++;.length; i++) {
+
+
+            }
+        } if (answers[i
+
+       ].checked && answers var result = "[i].value == 'Вы правильноc') {
+                ответили на total++;
+                " + total + break;
+            }
+
+
+" из " + } answers questions.length = document.getElementsByName + " вопросов!('q4'); "; alert( for (var i = 0result); }; i < answers. </script> length; i++) {
+
+</body> if (answers</html> ```[i].checked &&
+Пос answers[i].valueле проверки, == 'c') 
+    { будет показано ок total++; но с результатами. Е break; }сли ваш ответ } 
+answers правильный, ва =м будет показа documentно соответству.getElementsByName('ющее сообq5'); щ
+ение. Е for 
+(сли вашvar i = ответ неправильный0; i
+< answers, то также буде.length; i++)т показано соответ 
+  { ifствующее сооб (answers[iщение].
+checked && answers с прави[i].льным отvalue == 'aветом') { . total++; break; } } 
+var result = document.getElementById('result'); if (total == 5) { result.textContent = 'Все верно!'; } else {
+    result.textContent = 'Вы допустили ' + (5 - total) + ' ошибок.'; } }
+</script>
+
+</body> 
+</html> `
