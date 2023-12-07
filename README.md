@@ -1,1 +1,1 @@
-# pythonquiz123
+# polish repository
